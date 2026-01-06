@@ -51,6 +51,5 @@ library(Momoshop)
 The app returns a magick 'pipe' that you can use outside the app to post-process
 ```{r}
 library(magick)
-
 ```
 

@@ -33,12 +33,12 @@ CRAN releases, you may better get the development version instead:
 
 ``` r
 pak::pkg_install("MomX/Momoshop")
-``` r
+```
 
 ## How to use it
 
-Launch the app on your images and usage should be self-explanatory. Momoshop also has a manual inside the app. 
-
+Launch the app on your images and usage should be self-explanatory.
+Momoshop also has a manual inside the app.
 
 ``` r
 library(Momoshop)
