@@ -9,5 +9,17 @@ Description: More about what it does (maybe more than one line)
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/MomX/Momoshop
+URL: https://github.com/MomX/Momoshop, https://momx.github.io/Momoshop/
 BugReports: https://github.com/MomX/Momoshop/issues
+Imports: 
+    base64enc,
+    bslib,
+    jsonlite,
+    magick,
+    magrittr,
+    rlang,
+    shiny,
+    shinyjs,
+    shinyWidgets
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
