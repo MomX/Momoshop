@@ -16,14 +16,6 @@
 #' @importFrom rlang "%||%"
 #' @importFrom stats setNames
 
-# library(shiny)
-# library(magick)
-# library(tidyverse)
-# library(bslib)
-# library(shinyjs)
-# library(base64enc)
-# library(shinyWidgets)
-
 # ============================================================================
 # MOMOSHOP - A Morphometric Image Processing Pipeline Builder
 # ============================================================================
@@ -867,13 +859,39 @@ build_modal_ui <- function(op_name, params) {
 
 
 
-#' Run the application
+#' Launch Momoshop Interactive Pipeline Builder
 #'
-
+#' Momoshop provides an interactive interface for building, previewing, and
+#' exporting image processing pipelines using the magick package. The workflow
+#' is: Load images → Add operations → Preview results → Export code.
+#'
+#' @section Key Features:
+#' \itemize{
+#'   \item Real-time preview with live parameter adjustment (debounced 500ms)
+#'   \item Responsive mosaic layout that adapts to window width
+#'   \item Separate and Composite view modes for detailed comparison
+#'   \item Reproducible R code generation for all pipelines
+#'   \item Full pipeline control (edit, reorder, enable/disable operations)
+#' }
+#'
+#' @section Available Operations:
+#' \describe{
+#'   \item{Colorspace}{Extract channels, convert between RGB/HSL/HSV/Gray}
+#'   \item{Pixel Operations}{Modulate brightness/saturation/hue, negate, enhance, normalize}
+#'   \item{Geometry}{Rotate, flip horizontal/vertical, trim}
+#'   \item{Segmentation & Filters}{Blur, threshold, quantize, morphology, edge detection}
+#' }
+#'
+#' @return No return value. Launches the Shiny application in the default browser.
+#'
+#' @examples
+#' \dontrun{
+#' # Launch the application
+#' Momoshop()
+#' }
+#'
 #' @export
-run_app <- function() {
-
+Momoshop <- function() {
   shinyApp(ui, server, options = list(launch.browser = TRUE))
-
 }
 

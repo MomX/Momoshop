@@ -1,3 +1,4 @@
+
 #' Pipe operator
 #'
 #' See \code{magrittr::\link[magrittr:pipe]{\%>\%}} for details.
@@ -12,3 +13,4 @@
 #' @param rhs A function call using the magrittr semantics.
 #' @return The result of calling `rhs(lhs)`.
 NULL
+
